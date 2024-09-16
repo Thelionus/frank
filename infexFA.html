@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official website for François Aubin, jazz artist and pianist.">
+    <meta name="keywords" content="François Aubin, Jazz, Pianist, Music, Concerts, Albums">
+    <meta name="author" content="François Aubin">
+    <title>François Aubin | Jazz Pianist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 4em;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        /* Sticky menu */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #111;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* Make the image full width */
+        .about-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 40px;
+        }
+
+        section {
+            padding: 100px 50px;
+            text-align: center;
+            background-color: #111;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+
+        section p {
+            font-size: 1.2em;
+            color: #ccc;
+        }
+
+        /* Event grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 50px 0;
+        }
+
+        .grid-item {
+            background-color: #222;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .grid-item h3 {
+            margin-top: 15px;
+            font-size: 1.5em;
+            color: #ffcc00;
+        }
+
+        footer {
+            padding: 20px;
+            background-color: #1c1c1c;
+            text-align: center;
+            color: #fff;
+        }
+
+        footer .social-icons {
+            margin: 20px 0;
+        }
+
+        footer .social-icons a {
+            margin: 0 10px;
+            color: #ffcc00;
+            font-size: 1.5em;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer .social-icons a:hover {
+            color: #fff;
+        }
+
+        @media screen and (max-width: 768px) {
+            header {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>François Aubin</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#events">Events</a>
+            <a href="#music">Music</a>
+            <a href="#media">Media</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <img src="https://i.ibb.co/Kw1Mf71/4-F0-U8155-1.jpg" alt="François Aubin" class="about-img"> <!-- Full-width image under the title -->
+    </header>
+
+    <section id="about">
+        <h2>About François Aubin</h2>
+        <p>
+            François began piano lessons at the age of six but quickly lost interest due to the rigid teaching style. Nonetheless, his passion for music remained strong, and he continued to play by ear, drawing inspiration from his father, who frequently performed Boogie Woogie, blues, and popular tunes. After his parents returned from a trip to England with a collection of Beatles cassettes, François became captivated by their music, prompting him to begin learning guitar at the age of seven. He initially took lessons from his cousin before pursuing more formal guitar studies.
+
+            His musical journey expanded to include classical guitar, where he mastered pieces by composers such as Bach and Villa-Lobos. The early 1970s were a defining period for progressive rock, and François, through the influence of his friends, delved into the genre, listening to groundbreaking bands such as King Crimson, Pink Floyd, Gentle Giant, Van der Graaf Generator, and Genesis. However, jazz truly captured his heart when a friend introduced him to the music of Charles Mingus, igniting a profound passion for the genre and an admiration for jazz icons like John Coltrane, Oscar Peterson, and Bill Evans.
+
+            François’ musical education was further deepened by radio programs such as Gilles Archambault's Jazz et Blues, which helped strengthen his connection to jazz. By the age of 14, François was playing jazz piano by ear, heavily influenced by the intricate rhythms and dynamic style of Oscar Peterson.
+
+            In the 1980s, François was mentored by Skip Bey in Montreal, a relationship that led to regular trips to New York, where he had the opportunity to meet and learn from jazz legends. He attended many remarkable performances, including the unforgettable debut of Oscar Peterson, Joe Pass, and Ray Brown at the Blue Note in 1984. François was also present at other transformative shows, such as Abdullah Ibrahim’s performance at the Village Vanguard and Gil Evans' concerts with the Seven South ensemble.
+
+            Throughout his journey, François encountered numerous jazz greats, including Dizzy Gillespie. These experiences not only shaped his musical style but also fueled his lifelong dedication and passion for jazz.
+        </p>
+    </section>
+
+    <section id="events">
+        <h2>Upcoming Events</h2>
+        <div class="grid">
+            <div class="grid-item">
+                <img src="event1.jpg" alt="Event 1"> <!-- Replace with actual event images -->
+                <h3>Live at Blue Note - NYC</h3>
+                <p>Date: October 14, 2024</p>
+            </div>
+            <div class="grid-item">
+                <img src="event2.jpg" alt="Event 2">
+                <h3>Jazz Festival Paris</h3>
+                <p>Date: November 23, 2024</p>
+            </div>
+            <div class="grid-item">
+                <img src="event3.jpg" alt="Event 3">
+                <h3>Winter Jazzfest</h3>
+                <p>Date: January 7, 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="music">
+        <h2>Music</h2>
+        <div class="grid">
+            <div class="grid-item">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/swjcVI_WKFQ" title="Doxy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Doxy</h3>
+            </div>
+            <div class="grid-item">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/ICLyFSmqC1Q" title="Take the A Train" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Take the A Train</h3>
+            </div>
+            <div class="grid-item">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/9a2YS91g0SM" title="Body and Soul" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Body and Soul</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="media">
+        <h2>Media Highlights</h2>
+        <p>Coming soon...</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>For bookings, media inquiries, or general information, please contact us at <a href="mailto:info@francoisaubin.com">info@francoisaubin.com</a></p>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+        <p>&copy; 2024 François Aubin. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
