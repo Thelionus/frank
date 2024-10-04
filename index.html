@@ -1,33 +1,32 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>François Aubin | Jazz Pianist</title>
-    <meta name="description" content="Experience the soulful jazz piano of François Aubin. Discover upcoming concerts, listen to music, and get the latest news from the renowned jazz pianist.">
+    <title>François Aubin | Jazz Pianist & Composer</title>
+    <meta name="description" content="Discover the soulful jazz piano of François Aubin. Explore upcoming events, listen to music, and get the latest news from the renowned jazz pianist and composer.">
     <link rel="canonical" href="https://www.francoisaubin.com">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="François Aubin | Jazz Pianist">
-    <meta property="og:description" content="Experience the soulful jazz piano of François Aubin. Discover upcoming concerts, listen to music, and get the latest news from the renowned jazz pianist.">
+    <meta property="og:title" content="François Aubin | Jazz Pianist & Composer">
+    <meta property="og:description" content="Discover the soulful jazz piano of François Aubin. Explore upcoming events, listen to music, and get the latest news from the renowned jazz pianist and composer.">
     <meta property="og:image" content="https://i.ibb.co/Kw1Mf71/4-F0-U8155-1.jpg">
-    
-    <meta property="og:url" content="https://www.francois-aubin.com">
+    <meta property="og:url" content="https://www.francoisaubin.com">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="François Aubin | Jazz Pianist">
-    <meta name="twitter:description" content="Experience the soulful jazz piano of François Aubin. Discover upcoming concerts, listen to music, and get the latest news from the renowned jazz pianist.">
+    <meta name="twitter:title" content="François Aubin | Jazz Pianist & Composer">
+    <meta name="twitter:description" content="Discover the soulful jazz piano of François Aubin. Explore upcoming events, listen to music, and get the latest news from the renowned jazz pianist and composer.">
     <meta name="twitter:image" content="https://i.ibb.co/Kw1Mf71/4-F0-U8155-1.jpg">
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
+      "@type": "Musician",
       "name": "François Aubin",
       "url": "https://www.francoisaubin.com",
       "image": "https://i.ibb.co/Kw1Mf71/4-F0-U8155-1.jpg",
@@ -36,8 +35,19 @@
         "https://www.facebook.com/your_facebook_username",
         "https://www.instagram.com/your_instagram_username"
       ],
-      "jobTitle": "Jazz Pianist",
-      "description": "François Aubin is a renowned jazz pianist known for his soulful performances and compositions."
+      "jobTitle": "Jazz Pianist & Composer",
+      "description": "François Aubin is a renowned jazz pianist known for his soulful performances and compositions.",
+      "genre": "Jazz",
+      "performerIn": {
+        "@type": "Event",
+        "name": "François Aubin Live Performance",
+        "startDate": "2025-07-12T21:00",
+        "location": {
+          "@type": "Place",
+          "name": "Blue Note NYC",
+          "address": "New York, NY, United States"
+        }
+      }
     }
     </script>
 
@@ -119,21 +129,21 @@
             line-height: 1.6;
         }
 
-        /* Touring Section */
-        #touring {
+        /* Event Section */
+        #event {
             padding: 50px;
             background-color: #111;
             color: #fff;
             text-align: center;
         }
 
-        .tour-grid {
+        .event-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 20px;
         }
 
-        .tour-item {
+        .event-item {
             display: flex;
             justify-content: space-between;
             background-color: #222;
@@ -143,38 +153,38 @@
             transition: transform 0.3s ease;
         }
 
-        .tour-item:hover {
+        .event-item:hover {
             transform: translateY(-10px);
         }
 
-        .tour-date {
+        .event-date {
             font-size: 1.2em;
             color: #ffcc00;
             flex-basis: 20%;
             text-align: left;
         }
 
-        .tour-details {
+        .event-details {
             flex-basis: 60%;
             text-align: left;
         }
 
-        .tour-details h3 {
+        .event-details h3 {
             font-size: 1.1em;
             color: #fff;
         }
 
-        .tour-details p {
+        .event-details p {
             font-size: 1em;
             color: #ccc;
         }
 
-        .tour-actions {
+        .event-actions {
             flex-basis: 20%;
             text-align: right;
         }
 
-        .tour-button {
+        .event-button {
             background-color: #ffcc00;
             color: #000;
             border: none;
@@ -186,32 +196,32 @@
             transition: background-color 0.3s ease;
         }
 
-        .tour-button:hover {
+        .event-button:hover {
             background-color: #fff;
         }
 
         @media (max-width: 768px) {
-            .tour-grid {
+            .event-grid {
                 grid-template-columns: 1fr;
             }
 
-            .tour-item {
+            .event-item {
                 flex-direction: column;
                 text-align: center;
             }
 
-            .tour-date,
-            .tour-details,
-            .tour-actions {
+            .event-date,
+            .event-details,
+            .event-actions {
                 flex-basis: auto;
                 text-align: center;
             }
 
-            .tour-details h3 {
+            .event-details h3 {
                 margin: 10px 0;
             }
 
-            .tour-button {
+            .event-button {
                 margin-top: 10px;
             }
         }
@@ -292,7 +302,7 @@
         <h1>François Aubin</h1>
         <nav role="navigation">
             <a href="#about">About</a>
-            <a href="#touring">Touring</a>
+            <a href="#event">Event</a>
             <a href="#music">Music</a>
             <a href="#media">Media</a>
             <a href="#contact">Contact</a>
@@ -304,18 +314,18 @@
         <section id="about">
             <h2>About François Aubin</h2>
             <p>
-                François began piano lessons at six but soon transitioned to playing by ear, inspired by his father’s performances of Boogie Woogie, blues, and popular tunes. At seven, after his parents returned from England with Beatles cassettes, he became captivated by their music and took up the guitar. His musical horizons expanded to classical guitar, mastering works by Bach and Villa-Lobos. In the 1970s, he delved into progressive rock, influenced by bands like King Crimson and Pink Floyd. He later developed an interest in 20th-century composers such as Stockhausen, but jazz became his true passion after being introduced to Charles Mingus. By 14, François was playing jazz piano, heavily influenced by Oscar Peterson. 
-            
+                François began piano lessons at six but soon transitioned to playing by ear, inspired by his father’s performances of Boogie Woogie, blues, and popular tunes. At seven, after his parents returned from England with Beatles cassettes, he became captivated by their music and took up the guitar. His musical horizons expanded to classical guitar, mastering works by Bach and Villa-Lobos. In the 1970s, he delved into progressive rock, influenced by bands like King Crimson and Pink Floyd. He later developed an interest in 20th-century composers such as Stockhausen, but jazz became his true passion after being introduced to Charles Mingus. By 14, François was playing jazz piano, heavily influenced by Oscar Peterson.
+
                 In the 1980s, François was mentored by bassist Skip Bey in Montreal, which led to trips to New York, where he connected with jazz legends like Dizzy Gillespie. In 1988, François founded the Hiroshima Orchestra, featuring musicians like Yanick Rieu and Michel Rate, and performed at the Montreal International Jazz Festival. In 2011, François released a CD, collaborating with bassist Peter Washington and drummer Lewis Nash. This project showcased François' deep connection to the jazz tradition, blending his style with the timeless rhythms and harmonies of modern jazz.
-            
+
                 François is not only a jazz pianist but also deeply involved in cognitive engineering research. Learn more about <a href="https://cognitivegroup.com/blog/" target="_blank" rel="noopener noreferrer">François Aubin's cognitive engineering research here</a>. François remains excited about sharing new musical projects with the public.
             </p>
-            
-    
+        </section>
 
         <section id="music">
             <h2>Music</h2>
             <div class="grid">
+                <!-- Music Videos -->
                 <div class="grid-item">
                     <iframe src="https://www.youtube.com/embed/swjcVI_WKFQ" title="Doxy" allowfullscreen></iframe>
                     <h3>Doxy</h3>
@@ -325,7 +335,7 @@
                     <h3>CG Blues</h3>
                 </div>
                 <div class="grid-item">
-                    <iframe src="https://www.youtube.com/embed/XLt27H5siEI" title="François Aubin Jazz Performance" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/XLt27H5siEI" title="Stella by Starlight" allowfullscreen></iframe>
                     <h3>Stella by Starlight</h3>
                 </div>
                 <div class="grid-item">
@@ -336,7 +346,6 @@
                     <iframe src="https://www.youtube.com/embed/9a2YS91g0SM" title="Body and Soul" allowfullscreen></iframe>
                     <h3>Body and Soul</h3>
                 </div>
-                <!-- Updated new Track 2 link -->
                 <div class="grid-item">
                     <iframe src="https://www.youtube.com/embed/MVpTnE_NTx8" title="In a Mellow Tone" allowfullscreen></iframe>
                     <h3>In a Mellow Tone</h3>
@@ -346,59 +355,49 @@
                     <h3>Dadras</h3>
                 </div>
                 <div class="grid-item">
-                    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155682159&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                    <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-                        <a href="https://soundcloud.com/frank-aubin" title="Frank Aubin" target="_blank" style="color: #cccccc; text-decoration: none;">Frank Aubin</a> · 
-                        <a href="https://soundcloud.com/frank-aubin/wintertime-satranfa-29mai1988" title="Wintertime Satranfa 29mai1988" target="_blank" style="color: #cccccc; text-decoration: none;">Wintertime Satranfa 29mai1988</a>
-                    </div>
-                    <h3>Wintertime Satranga 29mai1988</h3>
+                    <iframe src="https://www.youtube.com/embed/PkkIBrcD4PQ" title="La vie" allowfullscreen></iframe>
+                    <h3>La vie</h3>
                 </div>
-                <!-- New SoundCloud track -->
+                
+                <!-- SoundCloud Tracks -->
+                <div class="grid-item">
+                    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155682159&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    <h3>Wintertime Satranfa 29mai1988</h3>
+                </div>
                 <div class="grid-item">
                     <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155573995&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                    <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-                        <a href="https://soundcloud.com/frank-aubin" title="Frank Aubin" target="_blank" style="color: #cccccc; text-decoration: none;">Frank Aubin</a> · 
-                        <a href="https://soundcloud.com/frank-aubin/rasun" title="Rasun" target="_blank" style="color: #cccccc; text-decoration: none;">Rasun</a>
-                    </div>
                     <h3>Rasun</h3>
                 </div>
             </div>
         </section>
-        
-    </section>
 
-    <section id="touring">
-        <h2>Touring</h2>
-            <div class="tour-item">
-    <!-- Improved Date with <time> element -->
-    <div class="tour-date">
-        <time datetime="2025-07-12">JUL 12, 2025</time> SAT
-    </div>
-
-    <div class="tour-details">
-        <h3>François Aubin Public Recording @ Blue Note NYC 2025 @ 9:00 PM</h3>
-        <p>New York, NY, United States</p>
-    </div>
-
-    <div class="tour-actions">
-        <!-- Accessible buttons with aria-labels -->
-        <a href="https://www.example.com/tickets" target="_blank">
-            <button class="tour-button" aria-label="Buy Tickets for François Aubin event at Blue Note NYC">
-                Tickets
-            </button>
-        </a>
-        <a href="https://www.example.com/rsvp" target="_blank">
-            <button class="tour-button" aria-label="RSVP for François Aubin event at Blue Note NYC">
-                RSVP
-            </button>
-        </a>
-    </div>
-</div>
-            <!-- Add more tour items as needed -->
-        </div>
-    </section>
-        
-        
+        <section id="event">
+            <h2>Event</h2>
+            <div class="event-grid">
+                <div class="event-item">
+                    <div class="event-date">
+                        <time datetime="2025-07-12">JUL 12, 2025</time> SAT
+                    </div>
+                    <div class="event-details">
+                        <h3>François Aubin Public Recording @ Blue Note NYC 2025 @ 9:00 PM</h3>
+                        <p>New York, NY, United States</p>
+                    </div>
+                    <div class="event-actions">
+                        <a href="https://www.example.com/tickets" target="_blank">
+                            <button class="event-button" aria-label="Buy Tickets for François Aubin event at Blue Note NYC">
+                                Tickets
+                            </button>
+                        </a>
+                        <a href="https://www.example.com/rsvp" target="_blank">
+                            <button class="event-button" aria-label="RSVP for François Aubin event at Blue Note NYC">
+                                RSVP
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <!-- Add more event items as needed -->
+            </div>
+        </section>
 
         <section id="media">
             <h2>Media Highlights</h2>
@@ -407,7 +406,7 @@
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>For bookings, media inquiries, or general information, please contact us at <a href="mailto:frankaubin@gmail.com">frankaubin@gmail.com.com</a></p>
+            <p>For bookings, media inquiries, or general information, please contact us at <a href="mailto:frankaubin@gmail.com">frankaubin@gmail.com</a>.</p>
         </section>
     </main>
 
