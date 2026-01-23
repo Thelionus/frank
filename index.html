@@ -210,11 +210,29 @@
             gap: 40px;
         }
 
-        .grid-item iframe {
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* New wrapper to enforce 16:9 aspect ratio */
+        .media-wrapper {
+            position: relative;
             width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            background: #111;
             border-radius: 4px;
+            overflow: hidden;
             margin-bottom: 15px;
-            background: #000;
+        }
+
+        .media-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         .grid-item h3 {
@@ -409,37 +427,45 @@
             <h2>Selected Works</h2>
             <div class="grid">
                <div class="grid-item">
-                    <iframe src="https://www.youtube.com/embed/swjcVI_WKFQ" title="Doxy" allowfullscreen style="border:none;"></iframe>
-                    <h3>Doxy</h3>
+                    <div class="media-wrapper">
+                        <iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155682159&color=%23333333&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    </div>
+                    <h3>Winter Time</h3>
                 </div>
-                <!-- Removed extra closing div that was here -->
                 <div class="grid-item">
-                    <iframe src="https://www.youtube.com/embed/D47UgW2aiv0" title="CG Blues" allowfullscreen style="border:none;"></iframe>
+                    <div class="media-wrapper">
+                        <iframe src="https://www.youtube.com/embed/D47UgW2aiv0" title="CG Blues" allowfullscreen style="border:none;"></iframe>
+                    </div>
                     <h3>CG Blues</h3>
                 </div>
                 <div class="grid-item">
-                    <iframe src="https://www.youtube.com/embed/XLt27H5siEI" title="Stella by Starlight" allowfullscreen style="border:none;"></iframe>
+                    <div class="media-wrapper">
+                         <iframe src="https://www.youtube.com/embed/XLt27H5siEI" title="Stella by Starlight" allowfullscreen style="border:none;"></iframe>
+                    </div>
                     <h3>Stella by Starlight</h3>
                 </div>
                 <div class="grid-item">
-                    <iframe src="https://www.youtube.com/embed/ICLyFSmqC1Q" title="Take the A Train" allowfullscreen style="border:none;"></iframe>
-                    <h3>Take the A Train</h3>
+                    <div class="media-wrapper">
+                        <iframe width="100%" src="https://www.youtube.com/embed/3DDA59z3VUk?si=NFnJyS3gTzUGn7dj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <h3>Hiroshima</h3>
                 </div>
                 <div class="grid-item">
-                    <iframe src="https://www.youtube.com/embed/9a2YS91g0SM" title="Body and Soul" allowfullscreen style="border:none;"></iframe>
+                    <div class="media-wrapper">
+                        <iframe src="https://www.youtube.com/embed/9a2YS91g0SM" title="Body and Soul" allowfullscreen style="border:none;"></iframe>
+                    </div>
                     <h3>Body and Soul</h3>
                 </div>
                 <div class="grid-item">
-                    <iframe src="https://www.youtube.com/embed/_lJYtsiAyTs" title="Francois Aubin Video" allowfullscreen style="border:none;"></iframe>
+                    <div class="media-wrapper">
+                        <iframe src="https://www.youtube.com/embed/_lJYtsiAyTs" title="Francois Aubin Video" allowfullscreen style="border:none;"></iframe>
+                    </div>
                     <h3>Who Can I Turn To</h3>
                 </div>
-
                 <div class="grid-item">
-                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155682159&color=%23333333&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-                    <h3>Wintertime Satranfa</h3>
-                </div>
-                <div class="grid-item">
-                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155573995&color=%23333333&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                    <div class="media-wrapper">
+                        <iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155573995&color=%23333333&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    </div>
                     <h3>Rasun</h3>
                 </div>
             </div>
