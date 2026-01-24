@@ -19,7 +19,6 @@
     <meta name="twitter:description" content="Discover the soulful jazz piano of François Aubin. Explore upcoming events, listen to music, and get the latest news from the renowned jazz pianist and composer.">
     <meta name="twitter:image" content="https://i.ibb.co/Kw1Mf71/4-F0-U8155-1.jpg">
 
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GM7MQG76P6"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -215,84 +214,6 @@
             border: none;
         }
 
-        /* Video Card Style - Links to YouTube */
-        .video-card {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #000;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            overflow: hidden;
-        }
-
-        .video-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%);
-            transition: background 0.3s ease;
-        }
-
-        .video-card:hover::before {
-            background: rgba(0,0,0,0.2);
-        }
-
-        .video-card .play-icon {
-            width: 68px;
-            height: 48px;
-            background: rgba(255, 0, 0, 0.9);
-            border-radius: 12px;
-            position: relative;
-            z-index: 2;
-            transition: transform 0.2s ease, background 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .video-card:hover .play-icon {
-            transform: scale(1.1);
-            background: #f00;
-        }
-
-        .video-card .play-icon::after {
-            content: '';
-            border-style: solid;
-            border-width: 10px 0 10px 18px;
-            border-color: transparent transparent transparent #fff;
-            margin-left: 4px;
-        }
-
-        .video-card .watch-text {
-            position: absolute;
-            bottom: 12px;
-            right: 12px;
-            background: rgba(0,0,0,0.7);
-            color: #fff;
-            font-size: 0.75em;
-            padding: 4px 8px;
-            border-radius: 3px;
-            z-index: 2;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .video-card .watch-text svg {
-            width: 14px;
-            height: 14px;
-        }
-
         .grid-item h3 {
             font-size: 1em;
             font-weight: 500;
@@ -485,63 +406,64 @@
                     </div>
                     <h3>Winter Time</h3>
                 </div>
+                <!-- Using Invidious (privacy-friendly YouTube frontend) for embeds -->
                 <div class="grid-item">
                     <div class="media-wrapper">
-                        <a href="https://www.youtube.com/watch?v=D47UgW2aiv0" target="_blank" rel="noopener" class="video-card" style="background-image: url('https://img.youtube.com/vi/D47UgW2aiv0/maxresdefault.jpg');">
-                            <div class="play-icon"></div>
-                            <span class="watch-text">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.861-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"/></svg>
-                                Watch on YouTube
-                            </span>
-                        </a>
+                        <iframe 
+                            src="https://inv.nadeko.net/embed/D47UgW2aiv0" 
+                            title="CG Blues"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
                     </div>
                     <h3>CG Blues</h3>
                 </div>
                 <div class="grid-item">
                     <div class="media-wrapper">
-                        <a href="https://www.youtube.com/watch?v=XLt27H5siEI" target="_blank" rel="noopener" class="video-card" style="background-image: url('https://img.youtube.com/vi/XLt27H5siEI/maxresdefault.jpg');">
-                            <div class="play-icon"></div>
-                            <span class="watch-text">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.861-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"/></svg>
-                                Watch on YouTube
-                            </span>
-                        </a>
+                        <iframe 
+                            src="https://inv.nadeko.net/embed/XLt27H5siEI" 
+                            title="Stella by Starlight"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
                     </div>
                     <h3>Stella by Starlight</h3>
                 </div>
                 <div class="grid-item">
                     <div class="media-wrapper">
-                        <a href="https://www.youtube.com/watch?v=3DDA59z3VUk" target="_blank" rel="noopener" class="video-card" style="background-image: url('https://img.youtube.com/vi/3DDA59z3VUk/maxresdefault.jpg');">
-                            <div class="play-icon"></div>
-                            <span class="watch-text">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.861-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"/></svg>
-                                Watch on YouTube
-                            </span>
-                        </a>
+                        <iframe 
+                            src="https://inv.nadeko.net/embed/3DDA59z3VUk" 
+                            title="Hiroshima"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
                     </div>
                     <h3>Hiroshima</h3>
                 </div>
                 <div class="grid-item">
                     <div class="media-wrapper">
-                        <a href="https://www.youtube.com/watch?v=9a2YS91g0SM" target="_blank" rel="noopener" class="video-card" style="background-image: url('https://img.youtube.com/vi/9a2YS91g0SM/maxresdefault.jpg');">
-                            <div class="play-icon"></div>
-                            <span class="watch-text">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.861-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"/></svg>
-                                Watch on YouTube
-                            </span>
-                        </a>
+                        <iframe 
+                            src="https://inv.nadeko.net/embed/9a2YS91g0SM" 
+                            title="Body and Soul"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
                     </div>
                     <h3>Body and Soul</h3>
                 </div>
                 <div class="grid-item">
                     <div class="media-wrapper">
-                        <a href="https://www.youtube.com/watch?v=_lJYtsiAyTs" target="_blank" rel="noopener" class="video-card" style="background-image: url('https://img.youtube.com/vi/_lJYtsiAyTs/maxresdefault.jpg');">
-                            <div class="play-icon"></div>
-                            <span class="watch-text">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.861-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"/></svg>
-                                Watch on YouTube
-                            </span>
-                        </a>
+                        <iframe 
+                            src="https://inv.nadeko.net/embed/_lJYtsiAyTs" 
+                            title="Who Can I Turn To"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
                     </div>
                     <h3>Who Can I Turn To</h3>
                 </div>
