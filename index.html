@@ -2,14 +2,6 @@
 <html lang="en">
 
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GM7MQG76P6"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-GM7MQG76P6');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>François Aubin | Jazz Pianist & Composer</title>
@@ -26,6 +18,15 @@
     <meta name="twitter:title" content="François Aubin | Jazz Pianist & Composer">
     <meta name="twitter:description" content="Discover the soulful jazz piano of François Aubin. Explore upcoming events, listen to music, and get the latest news from the renowned jazz pianist and composer.">
     <meta name="twitter:image" content="https://i.ibb.co/Kw1Mf71/4-F0-U8155-1.jpg">
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GM7MQG76P6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GM7MQG76P6');
+    </script>
 
     <script type="application/ld+json">
     {
@@ -77,6 +78,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg-color);
@@ -109,9 +114,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            /* We keep nav static now so it doesn't overlap the big hero image awkwardly */
             background-color: var(--bg-color);
-            z-index: 1000;
+            position: relative;
+            z-index: 100;
         }
 
         .nav-logo {
@@ -137,7 +142,6 @@
 
         /* Header & Full Width Image */
         header {
-            /* Spacing for the title text */
             padding: 60px 0 40px 0;
         }
 
@@ -152,8 +156,6 @@
         /* STYLES FOR THE FULL WIDTH IMAGE */
         .hero-banner-container {
             width: 100%;
-            /* Optional: limits height on very large screens so it doesn't take over too much vertical space.
-               Adjust '85vh' to taste, or remove it if you want it to show the whole image height always. */
             max-height: 85vh;
             overflow: hidden;
             margin-bottom: 80px; /* Spacing between image and "About" section */
@@ -162,8 +164,6 @@
         .hero-img-full {
             width: 100%;
             height: 100%;
-            /* object-fit: cover ensures the image fills the banner area without stretching,
-               cropping excess if necessary. Good for responsiveness. */
             object-fit: cover;
             display: block;
             filter: grayscale(30%) contrast(110%); /* Dramatic, premium look */
@@ -374,14 +374,6 @@
             }
         }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react/": "https://esm.sh/react@^19.2.3/"
-  }
-}
-</script>
 </head>
 
 <body>
@@ -428,43 +420,100 @@
             <div class="grid">
                <div class="grid-item">
                     <div class="media-wrapper">
-                        <iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155682159&color=%23333333&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            scrolling="no" 
+                            frameborder="no" 
+                            loading="lazy"
+                            allow="autoplay" 
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155682159&color=%23333333&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+                        </iframe>
                     </div>
                     <h3>Winter Time</h3>
                 </div>
                 <div class="grid-item">
                     <div class="media-wrapper">
-                        <iframe src="https://www.youtube.com/embed/D47UgW2aiv0" title="CG Blues" allowfullscreen style="border:none;"></iframe>
+                        <iframe 
+                            src="https://www.youtube.com/embed/D47UgW2aiv0" 
+                            title="CG Blues" 
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen 
+                            style="border:none;">
+                        </iframe>
                     </div>
                     <h3>CG Blues</h3>
                 </div>
                 <div class="grid-item">
                     <div class="media-wrapper">
-                         <iframe src="https://www.youtube.com/embed/XLt27H5siEI" title="Stella by Starlight" allowfullscreen style="border:none;"></iframe>
+                         <iframe 
+                            src="https://www.youtube.com/embed/XLt27H5siEI" 
+                            title="Stella by Starlight" 
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen 
+                            style="border:none;">
+                        </iframe>
                     </div>
                     <h3>Stella by Starlight</h3>
                 </div>
                 <div class="grid-item">
                     <div class="media-wrapper">
-                        <iframe width="100%" src="https://www.youtube.com/embed/3DDA59z3VUk?si=NFnJyS3gTzUGn7dj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe 
+                            width="100%" 
+                            src="https://www.youtube.com/embed/3DDA59z3VUk?si=NFnJyS3gTzUGn7dj" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
                     </div>
                     <h3>Hiroshima</h3>
                 </div>
                 <div class="grid-item">
                     <div class="media-wrapper">
-                        <iframe src="https://www.youtube.com/embed/9a2YS91g0SM" title="Body and Soul" allowfullscreen style="border:none;"></iframe>
+                        <iframe 
+                            src="https://www.youtube.com/embed/9a2YS91g0SM" 
+                            title="Body and Soul" 
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen 
+                            style="border:none;">
+                        </iframe>
                     </div>
                     <h3>Body and Soul</h3>
                 </div>
                 <div class="grid-item">
                     <div class="media-wrapper">
-                        <iframe src="https://www.youtube.com/embed/_lJYtsiAyTs" title="Francois Aubin Video" allowfullscreen style="border:none;"></iframe>
+                        <iframe 
+                            src="https://www.youtube.com/embed/_lJYtsiAyTs" 
+                            title="Francois Aubin Video" 
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen 
+                            style="border:none;">
+                        </iframe>
                     </div>
                     <h3>Who Can I Turn To</h3>
                 </div>
                 <div class="grid-item">
                     <div class="media-wrapper">
-                        <iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155573995&color=%23333333&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            scrolling="no" 
+                            frameborder="no" 
+                            loading="lazy"
+                            allow="autoplay" 
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155573995&color=%23333333&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+                        </iframe>
                     </div>
                     <h3>Rasun</h3>
                 </div>
