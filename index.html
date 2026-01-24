@@ -63,12 +63,11 @@
     <style>
         /* CSS Resets & Variables */
         :root {
-            --bg-color: #121212; /* Deep Graphite */
-            --text-primary: #E0E0E0; /* Off-white */
-            --text-secondary: #A0A0A0; /* Muted Grey */
-            --accent-color: #FFFFFF; /* Pure White for interaction */
+            --bg-color: #121212;
+            --text-primary: #E0E0E0;
+            --text-secondary: #A0A0A0;
+            --accent-color: #FFFFFF;
             --border-color: #333333;
-            /* This determines the width of the text content blocks */
             --content-width: 900px;
         }
 
@@ -88,10 +87,9 @@
             color: var(--text-primary);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
-            overflow-x: hidden; /* Prevent horizontal scrollbar due to full-width elements */
+            overflow-x: hidden;
         }
 
-        /* The container class centers text content and gives it max width */
         .container {
             max-width: var(--content-width);
             margin: 0 auto;
@@ -153,12 +151,11 @@
             color: var(--text-primary);
         }
 
-        /* STYLES FOR THE FULL WIDTH IMAGE */
         .hero-banner-container {
             width: 100%;
             max-height: 85vh;
             overflow: hidden;
-            margin-bottom: 80px; /* Spacing between image and "About" section */
+            margin-bottom: 80px;
         }
 
         .hero-img-full {
@@ -166,7 +163,7 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            filter: grayscale(30%) contrast(110%); /* Dramatic, premium look */
+            filter: grayscale(30%) contrast(110%);
             transition: filter 0.8s ease;
         }
 
@@ -193,7 +190,7 @@
             font-size: 1.15em;
             color: var(--text-secondary);
             margin-bottom: 20px;
-            max-width: 700px; /* Keeps reading lines comfortable length */
+            max-width: 700px;
         }
 
         section p a {
@@ -205,7 +202,6 @@
         /* Music Grid */
         .grid {
             display: grid;
-            /* Adjustable grid that fits as many items as possible */
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 40px;
         }
@@ -215,11 +211,10 @@
             flex-direction: column;
         }
 
-        /* New wrapper to enforce 16:9 aspect ratio */
         .media-wrapper {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             background: #111;
             border-radius: 4px;
             overflow: hidden;
@@ -233,6 +228,72 @@
             width: 100%;
             height: 100%;
             border: none;
+        }
+
+        /* Lite YouTube Embed Styles */
+        .lite-youtube {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            background-position: center center;
+            background-size: cover;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lite-youtube::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            transition: background 0.2s ease;
+        }
+
+        .lite-youtube:hover::before {
+            background: rgba(0,0,0,0.1);
+        }
+
+        .lite-youtube .play-btn {
+            width: 68px;
+            height: 48px;
+            background-color: #f00;
+            border-radius: 14px;
+            position: relative;
+            z-index: 1;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .lite-youtube:hover .play-btn {
+            background-color: #f00;
+            transform: scale(1.1);
+        }
+
+        .lite-youtube .play-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-40%, -50%);
+            border-style: solid;
+            border-width: 11px 0 11px 19px;
+            border-color: transparent transparent transparent #fff;
+        }
+
+        .lite-youtube.activated {
+            cursor: default;
+        }
+
+        .lite-youtube.activated::before,
+        .lite-youtube.activated .play-btn {
+            display: none;
         }
 
         .grid-item h3 {
@@ -249,7 +310,7 @@
 
         .event-item {
             display: grid;
-            grid-template-columns: 120px 1fr auto; /* Date | Details | Buttons */
+            grid-template-columns: 120px 1fr auto;
             gap: 30px;
             align-items: baseline;
             padding: 25px 0;
@@ -348,7 +409,6 @@
                 gap: 20px 30px;
             }
 
-            /* Make events stack vertically on mobile */
             .event-item {
                 grid-template-columns: 1fr;
                 gap: 15px;
@@ -363,7 +423,7 @@
                 width: 100%;
             }
             .event-button {
-                flex: 1; /* Make buttons full width on mobile */
+                flex: 1;
                 text-align: center;
             }
 
@@ -433,66 +493,41 @@
                 </div>
                 <div class="grid-item">
                     <div class="media-wrapper">
-                        <iframe 
-                            src="https://www.youtube.com/embed/D47UgW2aiv0?rel=0&modestbranding=1" 
-                            title="CG Blues" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen 
-                            style="border:none;">
-                        </iframe>
+                        <div class="lite-youtube" data-videoid="D47UgW2aiv0" style="background-image: url('https://i.ytimg.com/vi/D47UgW2aiv0/hqdefault.jpg');">
+                            <div class="play-btn"></div>
+                        </div>
                     </div>
                     <h3>CG Blues</h3>
                 </div>
                 <div class="grid-item">
                     <div class="media-wrapper">
-                         <iframe 
-                            src="https://www.youtube.com/embed/XLt27H5siEI?rel=0&modestbranding=1" 
-                            title="Stella by Starlight" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen 
-                            style="border:none;">
-                        </iframe>
+                        <div class="lite-youtube" data-videoid="XLt27H5siEI" style="background-image: url('https://i.ytimg.com/vi/XLt27H5siEI/hqdefault.jpg');">
+                            <div class="play-btn"></div>
+                        </div>
                     </div>
                     <h3>Stella by Starlight</h3>
                 </div>
                 <div class="grid-item">
                     <div class="media-wrapper">
-                        <iframe 
-                            src="https://www.youtube.com/embed/3DDA59z3VUk?rel=0&modestbranding=1" 
-                            title="Hiroshima" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen
-                            style="border:none;">
-                        </iframe>
+                        <div class="lite-youtube" data-videoid="3DDA59z3VUk" style="background-image: url('https://i.ytimg.com/vi/3DDA59z3VUk/hqdefault.jpg');">
+                            <div class="play-btn"></div>
+                        </div>
                     </div>
                     <h3>Hiroshima</h3>
                 </div>
                 <div class="grid-item">
                     <div class="media-wrapper">
-                        <iframe 
-                            src="https://www.youtube.com/embed/9a2YS91g0SM?rel=0&modestbranding=1" 
-                            title="Body and Soul" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen 
-                            style="border:none;">
-                        </iframe>
+                        <div class="lite-youtube" data-videoid="9a2YS91g0SM" style="background-image: url('https://i.ytimg.com/vi/9a2YS91g0SM/hqdefault.jpg');">
+                            <div class="play-btn"></div>
+                        </div>
                     </div>
                     <h3>Body and Soul</h3>
                 </div>
                 <div class="grid-item">
                     <div class="media-wrapper">
-                        <iframe 
-                            src="https://www.youtube.com/embed/_lJYtsiAyTs?rel=0&modestbranding=1" 
-                            title="Who Can I Turn To" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen 
-                            style="border:none;">
-                        </iframe>
+                        <div class="lite-youtube" data-videoid="_lJYtsiAyTs" style="background-image: url('https://i.ytimg.com/vi/_lJYtsiAyTs/hqdefault.jpg');">
+                            <div class="play-btn"></div>
+                        </div>
                     </div>
                     <h3>Who Can I Turn To</h3>
                 </div>
@@ -555,6 +590,36 @@
         </div>
         <p>&copy; 2025 François Aubin.</p>
     </footer>
+
+    <!-- Lite YouTube Embed Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const liteYoutubes = document.querySelectorAll('.lite-youtube');
+            
+            liteYoutubes.forEach(function(lite) {
+                lite.addEventListener('click', function() {
+                    if (lite.classList.contains('activated')) return;
+                    
+                    const videoId = lite.dataset.videoid;
+                    const iframe = document.createElement('iframe');
+                    iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1';
+                    iframe.title = 'YouTube video player';
+                    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+                    iframe.allowFullscreen = true;
+                    iframe.style.border = 'none';
+                    iframe.style.position = 'absolute';
+                    iframe.style.top = '0';
+                    iframe.style.left = '0';
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                    
+                    lite.classList.add('activated');
+                    lite.innerHTML = '';
+                    lite.appendChild(iframe);
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
